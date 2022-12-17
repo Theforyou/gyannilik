@@ -11,52 +11,41 @@ Command usage: `/batch [channel id or username]`
 Ex: `/batch -100xxx`
 """
 
-START_MESSAGE = '''**Hello, {}
-\nI Am [FlashLink Bot](https://t.me/FlashlinkOfficial), Bulk Link Converter. I Can Convert Links Directly From Your [FlashLink](https://flashlink.in) Account,
-    
-1. Go To 👉 https://flashlink.in/member/tools/api
-2. Than Copy API Key
-3. Than Type /shortener_api than give a single space and than paste your API Key.
-\n/set_api(space)API Key 
-\n(See Example.👇)
-Example:** `/shortener_api cbd63775f798fe6e58c67a56e6ce8b70c495cda4\n
- \n**Commands :**
- /help : To Get Help.
-/footer : To Get Help About Adding your Custom Footer to bot.
-/header : To Get Help About Adding your Custom Footer to bot.**
+START_MESSAGE = '''**Hello , I am flashlink.in ,  Link Converter. I Can Convert Links Directly From Your flashlink.in Account,
+
+See /help for more info.**
 '''
 
 
 
 HELP_MESSAGE = '''
-**Hey! My name is {firstname}. I am a FlashLink Shortener Bot.**
-Features 
-» [Hyperlink](https://t.me/{username})
-» Buttons convert support
-» Header and Footer Text support
-» Replace Username
-» Banner Image
-\n**Helpful commands:**
-/start: Starts me! You've probably already used this.
-/help: Sends this message; I'll tell you more about myself!
-\nIf You Have Any Problem Then Contact - @FlashlinkSupport
-\n**Available commands:**
-- /shortener_api
-- /header
-- /footer
-- /username
-- /banner_image
-- /me
-Use the commands to know more about the same
-Below are some features I provide'''
+**commands:
+/start - To Start Bot
+/help - To Get Help
+/me - To Display Your Current Settings
+
+Api:
+/shortner_api - To Add Your Flashlink Api
+
+Post Header:
+/header - To Set Default Header
+
+Post Footer:
+/footer - To Set Default Footer
+
+If You Have Any Problem Then Contact - @FlashLinkSupport'''
 
 
 
 ABOUT_TEXT = """
 **My Details:**
-`🤖 Name:` ** {} **  
-`🎭 Owner : [FlashLinkSupport](https://t.me/flashlinksupport)
-`🧰 Updates:` [FlashLinkOfficial](https://t.me/flashlinkofficial)**
+`🤖 Name:` ** {} **
+    
+`📝 Language:` [Python 3](https://www.python.org/)
+`🧰 Framework:` [Pyrogram](https://github.com/pyrogram/pyrogram)
+`👨‍💻 Developer:` [Anonymous](t.me/TN92FF)
+`📢 Support:` [DK BOTZ SUPPORT](https://t.me/TnlinksUrlShortener)
+`🌐 Source Code:` **[Click Here](https://t.me/TN92FF)**
 """
 
 
@@ -93,63 +82,13 @@ List of channels that have access to this Bot:
 
 {channels}"""
 
-HELP_REPLY_MARKUP = InlineKeyboardMarkup([
+HELP_REPLY_MARKUP = 
+ABOUT_REPLY_MARKUP =
+START_MESSAGE_REPLY_MARKUP  = 
 
-    [
-        InlineKeyboardButton('Custom Alias', callback_data=f'alias_conf'),
-        InlineKeyboardButton('Admins', callback_data=f'admins_list'),    
-    ],
+METHOD_REPLY_MARKUP =
 
-    [
-        
-        #InlineKeyboardButton('Channels', callback_data=f'channels_list'),
-        InlineKeyboardButton('Home', callback_data='start_command')
-        
-    ],
-
-
-])
-
-
-ABOUT_REPLY_MARKUP = InlineKeyboardMarkup([
-    [
-        InlineKeyboardButton('Home', callback_data=f'start_command'),
-        InlineKeyboardButton('Help', callback_data=f'help_command')
-    ],
-    [
-        InlineKeyboardButton('Close', callback_data='delete')
-    ]
-])
-
-START_MESSAGE_REPLY_MARKUP  = InlineKeyboardMarkup([
-    [
-        InlineKeyboardButton('Help', callback_data=f'help_command'),
-        InlineKeyboardButton('About', callback_data='about_command')
-    ],
-    [
-        InlineKeyboardButton('Close', callback_data='delete')
-    ]
-])
-
-METHOD_REPLY_MARKUP = InlineKeyboardMarkup([
-    [
-        InlineKeyboardButton('Mdisk + Shortener', callback_data=f'change_method#TnlinksWithMdisk'),
-        InlineKeyboardButton('Shortener', callback_data='change_method#Tnlinks')
-    ],
-        [
-        InlineKeyboardButton('Back', callback_data=f'help_command'),
-        InlineKeyboardButton('Close', callback_data='delete')
-    ],
-
-])
-
-BACK_REPLY_MARKUP = InlineKeyboardMarkup([
-    [
-        InlineKeyboardButton('Back', callback_data=f'help_command')
-    ],
-
-])
-
+BACK_REPLY_MARKUP = 
 USER_ABOUT_MESSAGE = """
 
 - Header Text: 
